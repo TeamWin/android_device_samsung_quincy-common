@@ -30,11 +30,15 @@ BOARD_FAMILY := quincy
 # inherit from common msm8660
 -include device/samsung/msm8660-common/BoardConfigCommon.mk
 
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := MSM8660_SURF
+
 # Kernel
-BOARD_KERNEL_CMDLINE        := androidboot.hardware=qcom usb_id_pin_rework=true no_console_suspend=true zcache
-BOARD_KERNEL_BASE           := 0x48000000
-BOARD_KERNEL_PAGESIZE       := 2048
-BOARD_MKBOOTIMG_ARGS        := --ramdisk_offset 0x01600000
+TARGET_KERNEL_SOURCE := kernel/samsung/msm8660-common
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom usb_id_pin_rework=true no_console_suspend=true zcache
+BOARD_KERNEL_BASE := 0x48000000
+BOARD_KERNEL_PAGESIZE := 2048
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01600000
 
 BOARD_HAS_NO_SELECT_BUTTON := true
 
