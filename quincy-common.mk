@@ -16,7 +16,10 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-#Get non-open-source specific aspects if available
+## The gps config appropriate for this device
+PRODUCT_COPY_FILES += device/common/gps/gps.conf_US_SUPL:system/etc/gps.conf
+
+## (2) Also get non-open-source specific aspects if available
 $(call inherit-product-if-exists, vendor/samsung/quincy-common/quincy-common-vendor.mk)
 
 ## overlays
@@ -37,7 +40,9 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
+    init.qcom.rc \
     init.target.rc \
+    ueventd.qcom.rc
 
 # QRNGD
 PRODUCT_PACKAGES += qrngd
