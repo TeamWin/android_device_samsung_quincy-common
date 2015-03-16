@@ -104,9 +104,9 @@
     <bool name="skip_restoring_network_selection">true</bool>
 
     <!-- Our amoled doesn't animate well. -->
-    <bool name="config_animateScreenLights">false</bool>
+    <bool name="config_animateScreenLights">true</bool>
 
     <!-- Enable stylus gestures -->
     <bool name="config_stylusGestures">true</bool>
- 
+
 </resources>
