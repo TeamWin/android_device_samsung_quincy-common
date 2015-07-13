@@ -398,9 +398,6 @@ service thermald /system/bin/thermald
     group root
     disabled
 
-on property.ro.modem.links.done=1
-    start thermald
-
 # qrngd will drop permissions after startup
 service qrngd /system/bin/qrngd -f
     class main
