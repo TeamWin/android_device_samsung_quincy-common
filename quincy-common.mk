@@ -55,6 +55,10 @@ TARGET_SCREEN_HEIGHT := 1280
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml
 
+#Override HW overlay
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.hwc.mdpcomp.enable=false
+  
 # common msm8660
 $(call inherit-product, device/samsung/msm8660-common/msm8660.mk)
 
