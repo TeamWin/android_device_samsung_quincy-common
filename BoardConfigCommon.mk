@@ -61,3 +61,4 @@ BOARD_RECOVERY_SWIPE := true
 # TWRP
 DEVICE_RESOLUTION := 800x1280
 TW_THEME := portrait_hdpi
+TW_BRIGHTNESS_PATH := /sys/devices/platform/msm_fb.524801/leds/lcd-backlight/brightness
